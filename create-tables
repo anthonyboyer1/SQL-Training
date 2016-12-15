@@ -1,0 +1,33 @@
+CREATE TABLE friends (
+  id INTERGER, 
+  name TEXT, 
+  birthday DATE
+);
+
+INSERT INTO friends (id, name, birthday)
+VALUES (1, 'Jane Doe', 'May 19th, 1993'), (2, 'Nicole Aguilar', 'June 3rd 1991'), (3, 'Tommy Thurman', 'January 1st 1987'), (4, 'Richard Boyer', 'November 24th 1968');
+
+UPDATE friends
+SET name = 'Jane Smith'
+WHERE id = 1;
+
+ALTER TABLE friends ADD COLUMN 
+email TEXT;
+
+UPDATE friends
+SET email = 'jdoe@exmaple'
+WHERE id = 1;
+UPDATE friends
+SET email = 'nicole@gmail.com'
+WHERE id = 2;
+UPDATE friends
+SET email = 'tommy@gmail.com'
+WHERE id = 3;
+UPDATE friends
+SET email = 'rich.a.boyer@redwings.com'
+WHERE id = 4;
+
+DELETE FROM friends WHERE 
+id = 1;
+
+SELECT * FROM friends;
